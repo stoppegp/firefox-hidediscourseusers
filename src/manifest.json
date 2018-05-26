@@ -1,0 +1,16 @@
+{
+	"manifest_version": 2,
+	"name": "Hide Discourse users",
+	"version": "1.0",
+	"description": "Blendet die Beiträge bestimmter Benutzer in Discourse aus.",
+	"content_scripts": [
+		{
+			"matches": ["<all_urls>"],
+			"js": ["jquery-3.3.1.min.js", "jquery.initialize.min.js", "hidediscourseusers.js"]
+		}
+	], 
+	"options_ui": {
+		"page": "options.html"
+	},
+	"permissions": ["storage"]
+}
